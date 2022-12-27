@@ -1,0 +1,9 @@
+from pymongo import Mogoclient
+connection=MogoClient(host=localhost,port=27017)
+db=connection['formation']
+user1={"nom":"jack","username":"jackson","password":,"123@@":,"role":"admin"}
+user2={"nom":"alison","username":"alis","password":,"1457/":,"role":"user"}
+user3={"nom":"rayane","username":"rayane","password":,"ray77":,"role":"admin"}
+user4={"nom":"dalida","username":"dalida","password":,"dalida":,"role":"user"}
+db.formation.insert_many([user1,user2,user3,user4])
+print(db)
