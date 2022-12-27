@@ -1,25 +1,45 @@
 import React from 'react';
 import "./Book.css"
 
-const  Books =(props) =>{
+const Books =(props) =>{
   const {books}=props;
-  const list=books.map(book=>{
-    return(
-      <div className='list' style={{display:'inline-table',marginLeft:'10%',marginTop:'5%'}} key={book.idB}>
-        <div><label style={{color:'purpule',fontSize:'18px',fontWeight:'400'}}>Nom: </label>{book.NameB}</div>
-        <div><label style={{color:'purpule',fontSize:'18px',fontWeight:'400'}}>Author: </label>{book.Author}</div>
-        <div><label style={{color:'purpule',fontSize:'18px',fontWeight:'400'}}>Days: </label>{book.Days}</div>
-        <div><label style={{color:'purpule',fontSize:'18px',fontWeight:'400'}}>Point of view: </label>{book.resume}</div>
-      </div>
-    )
-  })
+
+  const tableStyle = {
+    border: "1px solid black",
+    borderCollapse: "collapse",
+    width: "80%",
+    margin: "0 auto"
+  }
+
+  const cellStyle = {
+    border: "1px solid black",
+    padding: "10px",
+    textAlign: "left"
+  }
+
   return (
-    <div>
- 
- <div className='tableBook'>
-  {list}
- </div>
-    </div>
+    <table className='tableBook' style={tableStyle}>
+      <thead>
+        <tr>
+          <th style={cellStyle}>Name</th>
+          <th style={cellStyle}>Author</th>
+          <th style={cellStyle}>Days</th>
+          <th style={cellStyle}>Point of view</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          books.map(book => (
+            <tr key={book.idB}>
+              <td style={cellStyle}>{book.NameB}</td>
+              <td style={cellStyle}>{book.Author}</td>
+              <td style={cellStyle}>{book.Days}</td>
+              <td style={cellStyle}>{book.resume}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
   )
 }
 
