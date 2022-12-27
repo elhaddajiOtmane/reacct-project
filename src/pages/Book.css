@@ -14,3 +14,32 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
+
+
+.list {
+    display: inline-table;
+    margin-left: 10%;
+    margin-top: 5%;
+    border-radius: 10px;
+    background-color: #fff0f6;
+    border: 2px solid #ffb6c1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  label {
+    color: #8b008b;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Cursive', sans-serif;
+  }
+  
+  div {
+    font-family: 'Sans-serif', sans-serif;
+    color: #ff69b4;
+  }
+  
+  .tableBook {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/000/206/354/non_2x/vector-love-pink-girly-pattern.jpg');
+  }
+  
